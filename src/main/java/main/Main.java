@@ -7,20 +7,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        //create person 1
         Person person = new Person("Alexander", "Vasquez");
 
+        System.out.println("\nPerson 1");
+        System.out.println(person);
+        System.out.println("People counter: " + Person.getCounter());
+
+        //create person 2
         Person person1 = new Person();
-        System.out.println("Enter the name: ");
+        System.out.println("\nEnter the name: ");
         person1.setName(sc.nextLine());
         System.out.println("Enter the last name: ");
         person1.setLastName(sc.nextLine());
 
-        System.out.println("Person 1");
-        System.out.println("Name: " + person.getName());
-        System.out.println("Last Name: " + person.getLastName());
-
-        System.out.println("Person 2");
-        System.out.println("Name: " + person1.getName());
-        System.out.println("Last Name: " + person1.getLastName());
+        System.out.println("\nPerson 2");
+        System.out.println(person1);
+        System.out.println("People counter: " + Person.getCounter());
     }
 }
